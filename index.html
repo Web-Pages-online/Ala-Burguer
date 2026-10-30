@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Ala Burguer | Menú Digital y Pedidos por WhatsApp</title>
+    
+    <!-- Meta SEO & Open Graph -->
+    <meta name="description" content="Menú digital oficial de Ala Burguer. Hamburguesas a la parrilla, dogos jumbos, alitas, boneless y snacks con papas a la francesa incluidas. Haz tu pedido directo a nuestro WhatsApp.">
+    <meta name="keywords" content="Ala Burguer, hamburguesas, dogos, boneless, alitas, papas a la francesa, pedidos whatsapp, comida a domicilio">
+    <meta property="og:title" content="Ala Burguer | Menú Digital">
+    <meta property="og:description" content="Pide tus hamburguesas favoritas con papas incluidas directo a WhatsApp.">
+    <meta property="og:image" content="AlaBurguer.jpeg">
+    <meta property="og:type" content="restaurant.menu">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,600;0,700;0,800;1,400&family=Oswald:wght@500;600;700&family=Yellowtail&display=swap" rel="stylesheet">
+
+    <!-- Estilos CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="icon" type="image/jpeg" href="AlaBurguer.jpeg">
+</head>
+<body>
+
+    <!-- BARRA SUPERIOR DE CONTACTO & SERVICIO A DOMICILIO -->
+    <aside class="top-banner" aria-label="Contacto rápido">
+        <div class="delivery-info">
+            <div class="status-pill closed" id="top-status-pill">
+                <span class="status-dot red" id="top-status-dot"></span>
+                <span id="top-status-text">Cerrado • Abre Viernes 7:00 PM</span>
+            </div>
+            <span>Servicio a Domicilio: <strong>999 435 6458</strong></span>
+        </div>
+        <a href="https://wa.me/529994356458" target="_blank" rel="noopener" class="phone-link" id="top-banner-whatsapp-link">
+            <span>💬 Escribir al WhatsApp</span>
+        </a>
+    </aside>
+
+    <div class="container">
+        <!-- HEADER PRINCIPAL & BRANDING -->
+        <header class="site-header">
+            <a href="#" class="brand-wrapper" title="Ala Burguer Menú">
+                <div class="brand-logo-frame">
+                    <img src="AlaBurguer.jpeg" alt="Ala Burguer Logo" class="brand-logo-img">
+                </div>
+                <h1 class="brand-title" style="display:none;">ALA BURGUER</h1>
+                <p class="brand-tagline">Sabor a la parrilla con actitud</p>
+            </a>
+
+            <!-- Mini Badges de Garantía y Beneficios -->
+            <div class="trust-badges">
+                <span class="trust-badge" style="border-color: rgba(255, 183, 3, 0.45); background: rgba(255, 183, 3, 0.1);">
+                    <span class="icon">🕒</span> <strong>Vie a Dom: 7:00 PM - 12:00 AM</strong> (Mérida)
+                </span>
+                <span class="trust-badge">
+                    <span class="icon">🥩</span> 100% Carne de Res
+                </span>
+                <span class="trust-badge">
+                    <span class="icon">🍟</span> Papas en todas las Burgers & Dogos
+                </span>
+                <span class="trust-badge">
+                    <span class="icon">📲</span> Pedido directo a WhatsApp
+                </span>
+            </div>
+        </header>
+
+        <!-- BANNER DE ESTADO DEL HORARIO DE PEDIDOS -->
+        <section class="schedule-alert-banner closed" id="schedule-alert-banner">
+            <div class="schedule-banner-left">
+                <span class="schedule-banner-icon" id="schedule-icon">🕒</span>
+                <div class="schedule-banner-text">
+                    <strong id="schedule-title">Cocina Cerrada en este momento (Menú en modo informativo)</strong>
+                    <p id="schedule-desc">
+                        Horario de pedidos: <span class="highlight-hours">Viernes a Domingo de 7:00 PM a 12:00 AM</span> (Hora de Mérida). Los pedidos se habilitan 10 min antes (6:50 PM). ¡Puedes explorar el menú con calma!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- BUSCADOR EN TIEMPO REAL -->
+        <section class="search-filter-section" aria-label="Buscador de platillos">
+            <div class="search-box-wrapper">
+                <span class="search-icon">🔍</span>
+                <input 
+                    type="search" 
+                    id="search-input" 
+                    class="search-input" 
+                    placeholder="¿Qué se te antoja hoy? (ej. Doble Carne, Boneless, Dogo...)"
+                    autocomplete="off"
+                >
+                <button type="button" id="clear-search-btn" class="clear-search-btn" title="Limpiar búsqueda">✕</button>
+            </div>
+        </section>
+
+        <!-- AVISO DESTACADO (IDENTIDAD DEL MENÚ) -->
+        <div class="highlight-banner">
+            <div class="banner-text">
+                <span class="fire-icon">🔥</span>
+                <div>
+                    <h4>¡TODAS LAS HAMBURGUESAS Y DOGOS INCLUYEN PAPAS!</h4>
+                    <p>Acompañadas de nuestras crujientes papas a la francesa sazonadas.</p>
+                </div>
+            </div>
+            <span class="banner-tag">¡Pide Ya!</span>
+        </div>
+    </div>
+
+    <!-- NAVEGACIÓN STICKY DE CATEGORÍAS -->
+    <nav class="categories-nav-sticky" aria-label="Categorías del Menú">
+        <div class="container">
+            <div class="categories-pills-list" id="categories-pills-list">
+                <!-- Generado dinámicamente con JS -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- CONTENEDOR PRINCIPAL DEL MENÚ -->
+    <main class="container" id="menu-sections-container">
+        <!-- Generado dinámicamente desde js/data.js -->
+    </main>
+
+    <!-- FOOTER CON INFORMACIÓN Y CONTACTO -->
+    <footer class="site-footer">
+        <div class="container footer-content">
+            <div class="footer-logo-frame">
+                <img src="AlaBurguer.jpeg" alt="Ala Burguer Logo" class="footer-logo">
+            </div>
+            <h3 class="footer-title">ALA BURGUER</h3>
+            <p style="color:var(--text-muted); max-width:420px; font-size:0.9rem;">
+                Las mejores hamburguesas, dogos jumbos, boneless y alitas preparadas al momento con ingredientes de primera.
+            </p>
+            
+            <a href="https://wa.me/529994356458" target="_blank" rel="noopener" class="footer-phone-box" id="footer-whatsapp-link">
+                <span>📱 SERVICIO A DOMICILIO: 999 435 6458</span>
+            </a>
+
+            <p class="footer-copy">© 2026 Ala Burguer. Todos los derechos reservados. Menú Digital & Pedidos por WhatsApp.</p>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DEL CARRITO -->
+    <div class="floating-cart-trigger" id="cart-floating-trigger" role="button" aria-label="Ver carrito">
+        <div class="cart-icon-bubble">
+            <span>🛒</span>
+            <span class="cart-counter-badge" id="cart-count-badge">0</span>
+        </div>
+        <div class="cart-trigger-info">
+            <span class="cart-trigger-title">Ver mi pedido</span>
+            <span class="cart-trigger-total" id="cart-subtotal-trigger">$0.00</span>
+        </div>
+    </div>
+
+    <!-- MODAL DE PERSONALIZACIÓN DE PRODUCTO -->
+    <div class="modal-backdrop" id="customizer-modal-backdrop" aria-hidden="true">
+        <div class="customizer-modal" role="dialog" aria-modal="true" aria-labelledby="modal-item-title">
+            <div class="modal-header">
+                <div class="modal-header-titles">
+                    <h3 id="modal-item-title">Personalizar Producto</h3>
+                    <p id="modal-item-description">Detalles del platillo</p>
+                </div>
+                <button type="button" class="modal-close-btn" id="modal-close-btn" aria-label="Cerrar modal">✕</button>
+            </div>
+
+            <div class="modal-body" id="modal-body-scroll">
+                <!-- Grupos dinámicos (Pan, Salsa, Aderezo, Extras) -->
+                <div id="modal-custom-groups"></div>
+
+                <!-- Notas especiales -->
+                <div class="form-field-group">
+                    <label for="modal-notes-input" style="font-size:0.8rem; font-weight:700; color:var(--accent-gold);">
+                        Instrucciones especiales para tu platillo:
+                    </label>
+                    <textarea 
+                        id="modal-notes-input" 
+                        class="modal-notes-area" 
+                        placeholder="Ej. Sin cebolla, aderezo aparte, papas bien doradas..."
+                    ></textarea>
+                </div>
+            </div>
+
+            <div class="modal-footer">
+                <div class="quantity-stepper">
+                    <button type="button" class="step-btn" id="modal-minus-btn" aria-label="Restar">-</button>
+                    <span class="step-value" id="modal-qty-value">1</span>
+                    <button type="button" class="step-btn" id="modal-plus-btn" aria-label="Sumar">+</button>
+                </div>
+
+                <button type="button" class="btn-confirm-add" id="modal-confirm-btn">
+                    <span>Agregar al Carrito</span>
+                    <span id="modal-total-price">$0.00</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- DRAWER / PANEL LATERAL DEL CARRITO & CHECKOUT -->
+    <div class="cart-drawer-overlay" id="cart-drawer-overlay" aria-hidden="true">
+        <div class="cart-drawer" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-heading">
+            <div class="cart-drawer-header">
+                <h3 id="cart-drawer-heading">
+                    <span>🛒</span> Tu Pedido
+                </h3>
+                <button type="button" class="modal-close-btn" id="cart-drawer-close" aria-label="Cerrar pedido">✕</button>
+            </div>
+
+            <!-- Lista de items del carrito -->
+            <div class="cart-items-scroll" id="cart-items-list">
+                <!-- Se inyectan los items desde app.js -->
+            </div>
+
+            <!-- Formulario de Entrega y Pago -->
+            <div class="cart-checkout-section" id="cart-checkout-section">
+                <!-- Selector Tipo de Entrega -->
+                <div class="delivery-type-toggle">
+                    <button type="button" class="delivery-toggle-btn active" id="btn-type-domicilio">
+                        🛵 A Domicilio
+                    </button>
+                    <button type="button" class="delivery-toggle-btn" id="btn-type-recoger">
+                        🏪 Recoger en Local
+                    </button>
+                </div>
+
+                <!-- Datos del Cliente -->
+                <div class="form-field-group">
+                    <label for="client-name">Tu Nombre: *</label>
+                    <input type="text" id="client-name" class="form-input" placeholder="Nombre completo" required>
+                </div>
+
+                <div class="form-field-group">
+                    <label for="client-phone">Teléfono de Contacto:</label>
+                    <input type="tel" id="client-phone" class="form-input" placeholder="Ej. 999 123 4567">
+                </div>
+
+                <!-- Campos de Dirección (Sólo si es a Domicilio) -->
+                <div id="delivery-address-fields" style="display:flex; flex-direction:column; gap:10px;">
+                    <div class="form-field-group">
+                        <label for="client-street">Calle y Número: *</label>
+                        <input type="text" id="client-street" class="form-input" placeholder="Ej. Calle 45 #234 x 18 y 20">
+                    </div>
+                    <div class="form-field-group">
+                        <label for="client-colonia">Colonia / Fraccionamiento: *</label>
+                        <input type="text" id="client-colonia" class="form-input" placeholder="Ej. Fracc. Las Américas, Centro...">
+                    </div>
+                    <div class="form-field-group">
+                        <label for="client-cross">Cruzamientos o Referencia:</label>
+                        <input type="text" id="client-cross" class="form-input" placeholder="Ej. Casa de portón blanco frente al parque">
+                    </div>
+                </div>
+
+                <!-- Método de Pago -->
+                <div class="form-field-group">
+                    <label>Forma de Pago:</label>
+                    <div class="payment-method-selector">
+                        <button type="button" class="pay-btn-opt active" data-method="efectivo">💵 Efectivo</button>
+                        <button type="button" class="pay-btn-opt" data-method="transferencia">📲 Transfer</button>
+                        <button type="button" class="pay-btn-opt" data-method="tarjeta">💳 Tarjeta</button>
+                    </div>
+                </div>
+
+                <!-- Campo para cambio en efectivo -->
+                <div class="form-field-group" id="cash-change-container">
+                    <label for="client-cash-amount">¿Con cuánto vas a pagar? (para llevar cambio):</label>
+                    <input type="number" id="client-cash-amount" class="form-input" placeholder="Ej. 500 (Opcional)">
+                </div>
+
+                <div class="form-field-group">
+                    <label for="client-notes">Notas generales del pedido:</label>
+                    <input type="text" id="client-notes" class="form-input" placeholder="Alguna indicación para el repartidor...">
+                </div>
+
+                <!-- Resumen de Total -->
+                <div class="cart-total-summary">
+                    <span class="cart-total-label">Total a Pagar:</span>
+                    <span class="cart-total-amount" id="cart-drawer-total">$0.00</span>
+                </div>
+
+                <!-- Botón de WhatsApp -->
+                <button type="button" class="btn-send-whatsapp" id="btn-send-whatsapp">
+                    <span>📲 ENVIAR PEDIDO POR WHATSAPP</span>
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTENEDOR DE TOASTS -->
+    <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+    <!-- Scripts de la Aplicación -->
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+</body>
+</html>
